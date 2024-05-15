@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MineSweeper</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body onload="onInit()">
-
-    <script src="js/utils.js"></script>
-    <script src="js/main.js"></script>
+    <div class="container">
+        <h1>Minesweeper</h1>
+        <div id="message"></div>
+        <div id="board"></div>
+        <div id="flagCount">🚩Flags: <span id="flagCounter">0</span></div> 
+        <div id="timer">00:00</div>
+        <div id="difficulty">
+           
+            <button onclick="setLevel(4, 2)">Easy</button>
+            <button onclick="setLevel(8, 14)">Medium</button>
+            <button onclick="setLevel(12, 32)">Hard</button>
+        </div>
+        <button id="resetButton" onclick="resetGame()">New Game</button>
+        <button id="dark">🌚</button>
+    </div>
+    <footer id="footer">Dor MineSweeper</footer>
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
